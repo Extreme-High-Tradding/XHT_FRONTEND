@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server -d --open"
+    "start": "react-scripts start"
   },
   "repository": {
     "type": "git",
