@@ -4,12 +4,12 @@
   "description": "validating Issue #1",
   "main": "index.js",
   "engines": {
-    "npm": "5.7.1",
-    "node": "9.5.0"
+    "npm": "6.14.8",
+    "node": "v10.19.0"
   },
   "scripts": {
     "build": "webpack",
-    "start": "node index.js"
+    "start": "webpack-dev-server -d --open"
   },
   "repository": {
     "type": "git",
