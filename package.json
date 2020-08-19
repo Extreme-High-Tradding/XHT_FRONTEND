@@ -3,10 +3,6 @@
   "version": "1.0.0",
   "description": "validating Issue #1",
   "main": "index.js",
-  "engines": {
-    "npm": "6.14.8",
-    "node": "v10.19.0"
-  },
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server -d --open"
