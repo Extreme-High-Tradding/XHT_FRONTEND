@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "validating Issue #1",
   "main": "index.js",
+  "engines": {
+    "npm": "5.7.1",
+    "node": "9.5.0"
+  },
   "scripts": {
     "build": "webpack",
-    "start": "react-scripts start"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
