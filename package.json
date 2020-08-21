@@ -8,7 +8,7 @@
     "startdev": "webpack-dev-server --mode development --open",
     "postinstall": "webpack -p",
     "build": "webpack --mode production",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit "
   },
   "repository": {
     "type": "git",
