@@ -5,3 +5,8 @@
 .app {
   background: red;
 }
+
+.title{
+  color: purple;
+  font-size: 50px;
+}
