@@ -1,7 +1,9 @@
 import React from 'react';
+import './App.css';
+
 
 const App = ()=>(
-  <div>Hello to XTH</div>
+  <div className="app">Welcome to XHT</div>
 )
 
 export default App;
