@@ -4,7 +4,7 @@ import './App.css';
 
 const App = ()=>(
   <div className="app">Welcome to XHT
-  <div className="title">HELLO IM A TITLE</div>
+  <div className="title">HELLO IM A TITLEs</div>
   </div>
 )
 
