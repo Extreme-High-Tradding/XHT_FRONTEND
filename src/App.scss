@@ -1,4 +1,23 @@
-$primary-color: white;
+@import "./GlobalVars";
+@import "./assets/styles/Header";
+
+/* $background-color: #32256a; */
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-color;
+}
+
+/* .header__main {
+  background: $background-color;
+}
+ */
+
+/* $primary-color: white;
 $bg: black;
 $secundary-color: #32256A;
 
@@ -10,4 +29,4 @@ h1 {
   color: $primary-color;
   background-color: $bg;
   font-size: 0.7em;
-}
+} */
