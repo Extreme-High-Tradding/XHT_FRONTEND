@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-//import App from './App';
-import Login from './components/Login'
+import Header from '../src/components/Header';
 
-
-ReactDOM.render(<Login />, document.getElementById('root'));
+ReactDOM.render(<Header />, document.getElementById('root'));
