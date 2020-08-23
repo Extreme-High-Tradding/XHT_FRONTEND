@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../assets/static/logo_header.png';
 import arrow from '../assets/static/arrow.png';
+import logomobile from '../assets/static/FondoHigh.png';
+import menu from '../assets/static/menu.png';
 import '../App.scss';
 
 const Header = () => (
@@ -8,10 +10,14 @@ const Header = () => (
     <div className="header__container">
 
       <div className="header__logo">
-        <a href="#"><img className="header__img" src={logo} alt="Logo" /></a>
+        <a href="#">
+          <img className="header__img" src={logo} alt="Logo" />
+          <img className="header__img--mobile" src={logomobile} alt="Logo" />
+        </a>
+
       </div>
 
-      <div className="header__nav--logo">
+      {/* <div className="header__nav--logo">
         <ul className="header__markets">
           <li><a className="header__despliegue" href="#">Exchange<img src={arrow} alt="arrow" /></a>
             <ul className="header__deploy">
@@ -21,17 +27,24 @@ const Header = () => (
             </ul>
           </li>
         </ul>
-      </div>
+      </div> */}
 
     </div>
 
     <div className="header__menu">
-      <ul className="header__btn">
+      <a href="#"><img className="img--hamburger" src={menu} alt="menu" /></a>
+      <ul className="header__dropdown">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Exchage</a></li>
+      </ul>
+
+      
+      {/* <ul className="header__btn">
         <li><a className="header__btn--user" href="#">Log In</a></li>
         <li><a className="header__btn--user" href="#">Sing Up</a></li>
-      </ul>
+      </ul> */}
     </div>
-
+ 
   </header>
 );
 
