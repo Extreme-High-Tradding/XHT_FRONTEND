@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Header from '../src/components/Header';
-import Login from '../src/components/Login'
+import SignIn from '../src/components/SignIn';
+import SignUp from '../src/components/SingUp';
 
-ReactDOM.render(<Login />, document.getElementById('root'));
+
+ReactDOM.render(<SignUp />, document.getElementById('root'));

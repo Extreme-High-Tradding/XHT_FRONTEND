@@ -1,11 +1,10 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../App.scss';
-//import { useForm } from 'react-hook-form';
+
 import logo from '../assets/static/logo_header.png';
 import log from '../assets/static/FondoHigh.png';
 
-const Login =  ()=>(
+const SignIn = () => (
   <React.Fragment>
     <div className="login__header">
       <img className="login__header_image" src= {logo} alt=""/>
@@ -31,8 +30,7 @@ const Login =  ()=>(
       </div>
     </section>
   </React.Fragment>
-  
 )
 
-export default Login;
+export default SignIn;
 
