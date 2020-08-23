@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../assets/static/logo_header.png';
+import arrow from '../assets/static/arrow.png';
 import '../App.scss';
 
 const Header = () => (
@@ -7,14 +8,18 @@ const Header = () => (
     <div className="header__container">
 
       <div className="header__logo">
-        <img className="header__img" src={logo} alt="Logo" />
+        <a href="#"><img className="header__img" src={logo} alt="Logo" /></a>
       </div>
 
       <div className="header__nav--logo">
         <ul className="header__markets">
-          <li><a>BTC/USD</a></li>
-         {/*  <li><a>TESLA/USD</a></li>
-          <li><a>GOLD/USD</a></li> */}
+          <li><a className="header__despliegue" href="#">Exchange<img src={arrow} alt="arrow" /></a>
+            <ul className="header__deploy">
+              <li><a href="#">BTC/USD</a></li>
+              <li><a href="#">TESLA/USD</a></li>
+              <li><a href="#">GOLD/USD</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
 
@@ -22,8 +27,8 @@ const Header = () => (
 
     <div className="header__menu">
       <ul className="header__btn">
-        <li><a>Log In</a></li>
-        <li><a>Sing Up</a></li>
+        <li><a className="header__btn--user" href="#">Log In</a></li>
+        <li><a className="header__btn--user" href="#">Sing Up</a></li>
       </ul>
     </div>
 

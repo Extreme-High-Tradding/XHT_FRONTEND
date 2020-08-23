@@ -1,8 +1,7 @@
 @import "./GlobalVars";
 @import "./assets/styles/Header";
 @import "./assets/styles/Login";
-
-/* $background-color: #32256a; */
+@import "./assets/styles/Footer";
 
 * {
   margin: 0;
@@ -12,22 +11,3 @@
 body {
   background: $background-color;
 }
-
-/* .header__main {
-  background: $background-color;
-}
- */
-
-/* $primary-color: white;
-$bg: black;
-$secundary-color: #32256A;
-
-body {
-  background: $secundary-color;
-}
-
-h1 {
-  color: $primary-color;
-  background-color: $bg;
-  font-size: 0.7em;
-} */
