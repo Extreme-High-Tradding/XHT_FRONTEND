@@ -2,7 +2,6 @@ import React from 'react';
 import './App.scss';
 import logo from './assets/static/logo_header.png';
 
-
 const App = ()=>(
   <div className="app">Welcome to XHT
   <div className="title">HELLO IM A TITLEs</div>
