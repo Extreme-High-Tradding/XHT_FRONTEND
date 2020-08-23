@@ -18,6 +18,8 @@
   a {
     border: 2px solid $border-color;
     padding: 5px 40px 5px 5px;
+    text-decoration: none;
+    color: $font-color-primary;
   }
 }
 
@@ -25,7 +27,6 @@
   width: 120px;
   height: 40px;
   margin-bottom: -10px;
-  /* padding: $panel-spacing; */
 }
 
 .header__markets {
@@ -34,6 +35,10 @@
 
 .header__menu {
   padding-right: 30px;
+}
+
+.header__deploy {
+  display: none;
 }
 
 .header__btn {
@@ -46,6 +51,8 @@
     border: 2px solid $border-color;
     border-radius: 5px;
     padding: 5px 25px;
+    text-decoration: none;
+    color: $font-color-primary;
   }
   a:hover {
     background: $border-color;

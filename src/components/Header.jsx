@@ -12,9 +12,13 @@ const Header = () => (
 
       <div className="header__nav--logo">
         <ul className="header__markets">
-          <li><a>BTC/USD</a></li>
-         {/*  <li><a>TESLA/USD</a></li>
-          <li><a>GOLD/USD</a></li> */}
+          <li><a className="header__despliegue" href="#">Markets</a>
+            <ul className="header__deploy">
+              <li><a>BTC/USD</a></li>
+              <li><a>TESLA/USD</a></li>
+              <li><a>GOLD/USD</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
 
@@ -22,8 +26,8 @@ const Header = () => (
 
     <div className="header__menu">
       <ul className="header__btn">
-        <li><a>Log In</a></li>
-        <li><a>Sing Up</a></li>
+        <li><a href="#">Log In</a></li>
+        <li><a href="#">Sing Up</a></li>
       </ul>
     </div>
 
