@@ -1,0 +1,17 @@
+@import '../../GlobalVars';
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 99vw;
+  height: 80px;
+  display: flex;
+  margin: $panel-spacing;
+  background: $panel-color;
+  color: $font-color-primary;
+  align-items: center;
+  font-size: ($price-text - 0.2em);
+  h1 {
+    padding-left: $panel-spacing;
+  }
+}
