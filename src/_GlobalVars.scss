@@ -1,15 +1,16 @@
-// Colors
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 
+// Colors
 $background-color: #32256a;
 $panel-color: #2d225a;
 $btn-sell-color: #ff0000;
 $btn-buy-color: #158a13;
 $font-color-primary: #fbfaff;
 $border-color: #fe3daa;
-
+$font-color-inputs: #7B53FD;
 //fonts
 
-$primary-font: 'Lato';
+//$primary-font: 'Lato', sans-serif;
 
 //fonts-size
 
@@ -19,3 +20,7 @@ $button-text: 1.2em;
 //Spacing
 
 $panel-spacing: 0.5em;
+
+body{
+  font-family: 'Lato', sans-serif;
+}
