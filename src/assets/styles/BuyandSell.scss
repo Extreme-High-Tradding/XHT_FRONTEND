@@ -11,6 +11,11 @@
   }
 }
 
+.table__sell {
+  @extend .table__buy;
+  /* display: none; */
+}
+
 .table__content {
   display: flex;
   border: 2px solid $border-color;
@@ -68,7 +73,27 @@
   border: none;
 }
 
+.order__container {
+  width: 380px;
+}
+
 .order__btn {
   display: flex;
+  padding: 0px;
   list-style: none;
+}
+
+.order__btn {
+  justify-content: space-around;
+  a {
+    border: 2px solid $border-color;
+    background: $panel-color;
+    padding: 10px 80px;
+    color: $font-color-primary;
+    font-weight: 600;
+  }
+  a:hover {
+    background: $border-color;
+    color: black
+  }
 }

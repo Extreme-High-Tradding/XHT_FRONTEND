@@ -2,7 +2,7 @@ import React from 'react';
 import '../../App.scss';
 
 const Sell = () => (
-  <div className="table__buy">
+  <div className="table__sell">
     <div className="table__content">
       <input placeholder="Price" type="text" className="form__values" />
       <h1>USD</h1>

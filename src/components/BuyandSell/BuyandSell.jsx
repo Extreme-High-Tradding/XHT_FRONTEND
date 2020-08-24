@@ -8,8 +8,8 @@ const BuyandSell = () => {
     <React.Fragment>
       <div className="order__container">
         <ul className="order__btn">
-          <li>Buy</li>
-          <li>Sell</li>
+          <li><a hrer="#">Buy</a></li>
+          <li><a hrer="#">Sell</a></li>
         </ul>
         <Sell />
         <Buy />
