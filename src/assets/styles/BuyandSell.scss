@@ -85,15 +85,23 @@
 
 .order__btn {
   justify-content: space-around;
-  a {
-    border: 2px solid $border-color;
-    background: $panel-color;
+  button {
+    border: none;
+    /* background: $panel-color; */
     padding: 10px 80px;
     color: $font-color-primary;
     font-weight: 600;
   }
-  a:hover {
+  /* button:hover {
     background: $border-color;
     color: black
-  }
+  } */
+}
+
+.order1__buy {
+  background: $btn-buy-color;
+}
+
+.order__sell {
+  background: $btn-sell-color;
 }
