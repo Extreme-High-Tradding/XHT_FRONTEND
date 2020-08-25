@@ -1,7 +1,9 @@
 import React from 'react';
 
 const Graphic = () => (
-  <h1>Graphic</h1>
+  <div className="charts">
+    <h1>Graphic</h1>
+  </div>
 );
 
 export default Graphic;
