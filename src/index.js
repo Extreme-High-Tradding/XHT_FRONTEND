@@ -5,6 +5,7 @@ import SignIn from '../src/components/SignIn';
 import SignUp from '../src/components/SingUp';
 import Logo from '../src/pages/Login'
 import Login from '../src/pages/Login';
+import Profile from '../src/pages/Profile'
 import Home from '../src/pages/Home';
 
 
