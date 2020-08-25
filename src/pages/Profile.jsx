@@ -35,14 +35,47 @@ const Profile = () => (
         </div>
       </div>
     </div>
-  
+
     <div className="profile__balance">
       <div className="profile__categories">
         <h2>My Balance</h2>
         <img src= {chart} alt=""/>
       </div>
+      <div className="profile__tablechart">
+        <table>
+          <thead>
+            <tr>
+              <th>Assets</th>
+              <th>Profits</th>
+              <th>Loses</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tesla</td>
+              <td>$ 343443</td>
+              <td>$ 3434353</td>
+              <td>$ 32.2</td>
+            </tr>
+            <tr>
+              <td>Gold</td>
+              <td>$ 343443</td>
+              <td>$ 3434353</td>
+              <td>$ 32.2</td>
+            </tr>
+            <tr>
+              <td>Bitcoin</td>
+              <td>$ 343443</td>
+              <td>$ 3434353</td>
+              <td>$ 32.2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
+
 );
 
 export default Profile;
