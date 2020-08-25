@@ -48,20 +48,4 @@ class BuyandSell extends Component {
 
 }
 
-
-/* const BuyandSell = () => {
-  
-  return (
-    <React.Fragment>
-      <div className="order__container">
-        <ul className="order__btn">
-          <li><a href="/sell">Buy</a></li>
-          <li><a href="/buy">Sell</a></li>
-        </ul>
-        
-      </div>
-    </React.Fragment>
-  )
-} */
-
 export default BuyandSell;

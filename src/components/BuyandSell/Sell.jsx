@@ -5,11 +5,11 @@ const Sell = () => (
   <div className="table__sell">
     <div className="table__content">
       <input placeholder="Price" type="text" className="form__values" />
-      <h1>USD</h1>
+      <span className="table__value">USD</span>
     </div>
     <div className="table__content">
       <input placeholder="Amount" type="text" className="form__values" />
-      <h1>USD</h1>
+      <span className="table__value">USD</span>
     </div>
 
     <div className="orden__total">

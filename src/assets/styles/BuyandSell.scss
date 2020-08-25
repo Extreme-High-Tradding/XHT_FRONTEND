@@ -1,38 +1,35 @@
 @import "../../GlobalVars";
 
-.table__buy {
-  /* margin: 0 auto; */
-  background: $panel-color;
-  width: 380px;
-  padding: 10px;
-  /* border: 2px solid $border-color; */
-  input {
-    margin: 0;
-  }
-}
-
-.table__sell {
-  @extend .table__buy;
-  /* display: none; */
+.order__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  align-self: center;
+  padding: 15px;
+  background: /* $panel-color */white;
+  border-radius: 10px;
 }
 
 .table__content {
   display: flex;
-  border: 2px solid $border-color;
-  margin: 10px;
-  h1 {
+  border: 2px solid /* $border-color */ $panel-color;
+  margin: 10px 0px;
+  .table__value {
     padding: 5px 20px;
-    font-size: 1.2em;
+    font-size: 1em;
     align-self: center;
-    color: $font-color-primary;
+    color: /* $font-color-primary */ $panel-color;
   }
 }
 
 .form__values {
-  background-color: $panel-color;
-  font-size: 1em;
+  width: 100%;
+  margin: 0;
+  background-color: /* $panel-color */white;
+  font-size: 0.8em;
   padding: 5px 10px;
-  border-right: 2px solid $border-color;
+  border-right: 2px solid /* $border-color */ $panel-color;
+  border-bottom: none;
   color: $font-color-primary;
 }
 
@@ -40,7 +37,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 10px;
-  color: $font-color-primary;
+  color: /* $font-color-primary */$panel-color;
 }
 
 .total__content {
@@ -62,6 +59,7 @@
   padding: 5px;
   font-size: 1.2em;
   border: none;
+  border-radius: 5px;
 }
 
 .btn__buy {
@@ -71,10 +69,7 @@
   padding: 5px;
   font-size: 1.2em;
   border: none;
-}
-
-.order__container {
-  width: 380px;
+  border-radius: 5px;
 }
 
 .order__btn {
@@ -85,23 +80,20 @@
 
 .order__btn {
   justify-content: space-around;
-  button {
+  .order1__buy {
+    font-size: $button-text;
+    width: 100%;
     border: none;
-    /* background: $panel-color; */
-    padding: 10px 80px;
+    background: $btn-buy-color;
+    padding: 5px 65px;
     color: $font-color-primary;
-    font-weight: 600;
   }
-  /* button:hover {
-    background: $border-color;
-    color: black
-  } */
-}
-
-.order1__buy {
-  background: $btn-buy-color;
-}
-
-.order__sell {
-  background: $btn-sell-color;
+  .order__sell {
+    font-size: $button-text;
+    width: 100%;
+    border: none;
+    padding: 5px 65px;
+    color: $font-color-primary;
+    background: $btn-sell-color;
+  }
 }
