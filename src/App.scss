@@ -17,3 +17,11 @@
 body {
   background: $background-color;
 }
+
+.layout__container {
+  /* display: flex; */
+  flex-wrap: wrap;
+  /* align-items: flex-end;
+  align-self: center; */
+  align-content: space-between;
+}

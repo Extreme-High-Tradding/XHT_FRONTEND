@@ -1,10 +1,11 @@
 @import '../../GlobalVars';
 
 .footer {
- /*  position: relative;
-  bottom: 0;
-  width: 99vw; */
+  width: 99%;
   height: 80px;
+  position: relative;
+  bottom: 0;
+  left: 0;
   display: flex;
   margin: 8px;
   background: $panel-color;
