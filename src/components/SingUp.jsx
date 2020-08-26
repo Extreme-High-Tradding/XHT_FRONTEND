@@ -1,13 +1,13 @@
 import React from 'react';
 
-import log from '../assets/static/FondoHigh.png';
+import logomorado from '../assets/static/logomorado.png';
 
 const SignUp = () => (
   <React.Fragment>
     <section className="login__section">
       <div className="login__container">
         <form id="formsu" className="login__signin_input">
-          <img className="login__img_logo" src={log} alt="logo" />
+          <img className="login__img_logo" src={logomorado} alt="logo" />
           <div className="login__title">
             <h2>Create Account</h2>
           </div>
