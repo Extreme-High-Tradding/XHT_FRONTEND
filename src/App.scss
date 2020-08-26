@@ -17,3 +17,8 @@
 body {
   background: $background-color;
 }
+
+.layout__container {
+  flex-wrap: wrap;
+  align-content: space-between;
+}

@@ -54,7 +54,7 @@
 }
 
 .header__deploy {
-  display: block;
+  display: none;
   list-style: none;
   background: $panel-color;
   padding: 10px;
@@ -115,6 +115,7 @@
   .header__dropdown {
     display: none;
     position: relative;
+    z-index: 5;
     list-style: none;
     background: $panel-color;
     padding: 0px;
