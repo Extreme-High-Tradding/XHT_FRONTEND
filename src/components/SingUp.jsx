@@ -22,7 +22,6 @@ const SignUp = () => (
           </div>
           <div className="login__sigin_button">
             <button className="button_si" type="submit" form="formsu" value="Submit">Create Account</button>
-            
           </div>
         </form>
       </div>

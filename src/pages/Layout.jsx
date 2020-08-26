@@ -1,16 +1,15 @@
 import React from 'react';
 import Header from '../components/Header';
-import SignUp from '../components/SingUp';
-import Footer from '../components/Footer'
+import Footer from '../components/Footer';
 
-const Login = () => {
+const Layout = (props) => {
   return (
     <React.Fragment>
       <Header />
-      <SignUp />
+      {props.children}
       <Footer />
     </React.Fragment>
   )
 }
 
-export default Login;
+export default Layout;
