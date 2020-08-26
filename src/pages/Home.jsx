@@ -11,7 +11,6 @@ import './Home.scss';
 const Home = () => {
   return (
     <React.Fragment>
-      <Header />
       <div className="container">
           <div className="container__chart">
             <Graphic />
@@ -28,7 +27,6 @@ const Home = () => {
               </div>
           </div>
       </div>
-      <Footer />
     </React.Fragment>
   )
 }

@@ -54,7 +54,7 @@
 }
 
 .header__deploy {
-  display: none;
+  display: block;
   list-style: none;
   background: $panel-color;
   padding: 10px;
@@ -154,7 +154,21 @@
   }
 
   .header__dropdown {
-    display: none;
+    display: flex;
+  li {
+    list-style: none;
+    padding: $panel-spacing;
+  }
+  a {
+    border: 2px solid $border-color;
+    border-radius: 5px;
+    padding: 5px 25px;
+    text-decoration: none;
+    color: $font-color-primary;
+  }
+  a:hover {
+    background: $border-color;
+  }
   }
 }
 

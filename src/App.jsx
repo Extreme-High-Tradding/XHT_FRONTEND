@@ -1,13 +1,25 @@
 import React from 'react';
-import './App.scss';
-import logo from './assets/static/logo_header.png';
+import { Route } from 'react-router';
+import { BrowserRouter } from 'react-router-dom';
+import Layout from './pages/Layout';
+import Home from './pages/Home';
+import SignIn from './components/SignIn';
+import SignUp from './components/SingUp';
+import Profile from './pages/Profile';
 
-const App = ()=>(
-  <div className="app">Welcome to XHT
-  <div className="title">HELLO IM A TITLEs</div>
-  <img className="header__logo" src={logo} alt="logo" />
-  <h1>PROBANDO SASS</h1>
-  </div>
-)
+import './App.scss';
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/signin" component={SignIn} />
+        {/* <Route exact path="/" component={Profile} /> */}
+      </Layout>
+    </BrowserRouter>
+  )
+}
 
 export default App;
