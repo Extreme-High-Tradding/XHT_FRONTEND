@@ -5,9 +5,17 @@ import Footer from '../components/Footer';
 const Layout = (props) => {
   return (
     <React.Fragment>
-      <Header />
-      {props.children}
-      <Footer />
+      <div className="layout__container">
+        <div>
+          <Header />
+        </div>
+        <div>
+          {props.children}
+        </div>
+        <div>
+          <Footer />
+        </div>
+      </div>
     </React.Fragment>
   )
 }

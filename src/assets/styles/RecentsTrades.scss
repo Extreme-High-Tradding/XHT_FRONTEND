@@ -6,7 +6,6 @@
   grid-template-rows: auto;
   .trades__title {
     background: /* $border-color */ #7B53FD;
-    /* width: 370px; */
     padding: 6px;
     font-size: 0.6em;
     padding-left: 10px;
@@ -16,22 +15,14 @@
     font-weight: lighter;
   }
   .table_content {
-    /* display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; */
-
-    /* background: white; */
     width: 100%;
     overflow-y: visible;
   }
   .trades__table {
-    /* @extend .trades__title; */
     background: /* $panel-color */white;
     font-size: 0.7em;
     color: $panel-color;
     width: 100%;
-    /* height: 30vh; */
-    /* padding: 10px; */
     thead {
       text-align: right;
       padding: 15px;
@@ -42,12 +33,3 @@
     }
   }
 }
-
-/* @media (min-width: 100px) and (max-width: 800px) {
-  .trades__main {
-    /* margin: 0 5px; */
-    /* .trades__title {
-      height: 40px;
-    }
-  } */
-/* } */

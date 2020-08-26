@@ -1,9 +1,10 @@
 import React from 'react';
+import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
 const Graphic = () => (
-  <div className="charts">
-    <h1>Graphic</h1>
-  </div>
+  <TradingViewWidget symbol="NASDAQ:TSLA" /*theme={Themes.DARK}*/
+  locale="fr"
+  autosize />
 );
 
 export default Graphic;
