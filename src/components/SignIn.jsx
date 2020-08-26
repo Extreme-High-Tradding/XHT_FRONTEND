@@ -4,6 +4,7 @@ import '../App.scss';
 
 import logo from '../assets/static/logo_header.png';
 import log from '../assets/static/FondoHigh.png';
+import logomorado from '../assets/static/logomorado.png';
 
 class SignIn extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class SignIn extends React.Component {
         <section className="login__section">
           <div className="login__container">
             <form id="formsa" className="login__signin_input">
-              <img className="login__img_logo" src={log} alt="logo" />
+              <img className="login__img_logo" src={logomorado} alt="logo" />
               <div className="login__title">
                 <h2>Sign in</h2>
               </div>
