@@ -5,7 +5,7 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   align-self: center;
-  padding: 15px;
+  padding: 10px;
   background: /* $panel-color */white;
   border-radius: 10px;
 }
@@ -13,7 +13,7 @@
 .table__content {
   display: flex;
   border: 2px solid /* $border-color */ $panel-color;
-  margin: 10px 0px;
+  margin: 20px 0px;
   .table__value {
     padding: 5px 20px;
     font-size: 1em;
@@ -31,6 +31,28 @@
   border-right: 2px solid /* $border-color */ $panel-color;
   border-bottom: none;
   color: $font-color-primary;
+}
+
+#form__markert {
+  height: 100%;
+  border: none;
+  border-radius: none;
+  box-shadow: none;
+}
+
+#form__input{
+  /* margin: 0 3em; */
+  width: 20em;
+  height: 3em;
+  background-color: white;
+  border: none;
+  border-right: 2px solid $panel-color;
+  color:$panel-color;
+}
+::placeholder{
+  color:$panel-color;
+  opacity: 1;
+  font-size: 1.2em;
 }
 
 .orden__total {
@@ -85,14 +107,14 @@
     width: 100%;
     border: none;
     background: $btn-buy-color;
-    padding: 5px 65px;
+    padding: 5px 70px;
     color: $font-color-primary;
   }
   .order__sell {
     font-size: $button-text;
     width: 100%;
     border: none;
-    padding: 5px 65px;
+    padding: 5px 70px;
     color: $font-color-primary;
     background: $btn-sell-color;
   }
