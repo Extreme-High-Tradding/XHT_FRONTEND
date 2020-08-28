@@ -23,6 +23,7 @@
   "homepage": "https://github.com/Extreme-High-Tradding/XHT_FRONTEND#readme",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-transform-regenerator": "^7.10.4",
     "axios": "^0.20.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "express": "^4.17.1",
@@ -40,6 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
+    "@babel/plugin-transform-runtime": "^7.11.0",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",

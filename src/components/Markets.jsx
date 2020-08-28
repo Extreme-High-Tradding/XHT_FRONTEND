@@ -3,23 +3,43 @@ import axios from 'axios';
 
 class Markets extends Component {
 
-  constructor(props) {
-    super(props);
-
+  constructor() {
+    super();
     this.state = {
-      market: []
+      markets: []
     };
+  };
+
+  async componentDidMount() {
+    const respuesta = await axios.get( 'https://sandbox.iexapis.com/stable/stock/aapl/peers?token=Tsk_2c0c88ee6ef14adb9250bfa7391d2c33 ' /* 'https://sandbox.iexapis.com/stable/stock/market/batch?symbols=TLSA,GOLD&types=quote&range=1m&last=5&token=Tsk_2c0c88ee6ef14adb9250bfa7391d2c33' */  /* ' https://sandbox.iexapis.com/stable/stock/TSLA/quote?token=Tpk_955576a7523c4a48b0e87e29d439a38e' */);
+    console.log('respuesta ', respuesta.data);
+    this.setState({
+      markets: respuesta.data
+    })
+      /* .then(res => {
+        const market = res.data;
+        console.log(market.change);
+      }) */
   }
 
-  componentDidMount() {
-    axios.get('https://sandbox.iexapis.com/stable/stock/market/batch?symbols=TLSA,GOLD,btcusd&types=quote&range=1m&last=5&token=Tsk_2c0c88ee6ef14adb9250bfa7391d2c33')
-      .then(res => {
-        const market = res.data;
-        console.log(market);
-      })
+  ponerFilas = () => {
+    this.state.markets.map((currency) => (
+      <tr key={currency}>
+          <td className="markets__pair">
+            { currency.symbol }
+          </td>
+          <td>
+            { currency.latestPrice }
+          </td>
+          <td>
+            { currency.changePercent }
+          </td>
+        </tr>
+    ))
   }
 
   render() {
+    console.log(this.state.market)
     return (
       <div className="trades__main">
     <div className="trades__title">
@@ -32,7 +52,7 @@ class Markets extends Component {
             Pair
           </th>
           <th>
-            Price
+            price
           </th>
           <th>
             Change
@@ -40,17 +60,7 @@ class Markets extends Component {
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td className="markets__pair">
-            TESLA
-          </td>
-          <td>
-            0.020215
-          </td>
-          <td>
-            11740.000
-          </td>
-        </tr>
+        {this.ponerFilas}
         <tr>
           <td className="markets__pair">
             BTC

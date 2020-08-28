@@ -15,10 +15,18 @@ class Buy extends Component {
   };
   render () {
     return (
-        <form className="table__buy" id="form__markert">
+        <form className="table__buy" id="operation_form">
           <div className="table__content">
+            <div className="table__content">
+              <input
+                id="asset"
+                value="1"
+                name="asset"
+                type="hidden"
+                className="input__hidden" />
+            </div>
             <input
-              id="form__input"
+              id="price"
               onChange={this.handleChange}
               name="price"
               placeholder="Price"
@@ -28,13 +36,40 @@ class Buy extends Component {
           </div>
           <div className="table__content">
             <input
-              id="form__input"
+              id="amount"
               onChange={this.handleChange}
               name="amount"
               placeholder="Amount"
               type="text"
               className="form__values" />
             <span className="table__value">USD</span>
+          </div>
+
+          <div className="table__content">
+            <input
+              id="user_id"
+              value="1"
+              name="user_id"
+              type="hidden"
+              className="form__values" />
+          </div>
+
+          <div className="table__content">
+            <input
+              id="operation_type"
+              value="false"
+              name="operation_type"
+              type="hidden"
+              className="form__values" />
+          </div>
+
+          <div className="table__content">
+            <input
+              id="operation_status"
+              value="false"
+              name="operation_status"
+              type="hidden"
+              className="form__values" />
           </div>
 
           <div className="orden__total">
@@ -47,7 +82,7 @@ class Buy extends Component {
           <div className="btn__order">
             <button 
               onClick={this.handleClick}
-              type="button" 
+              type="submit"
               className="btn__buy">Buy</button>
           </div>
         </form>
