@@ -20,7 +20,7 @@ class Header extends React.Component {
       <div className="header__menu">
         <a href="#"><img className="img--hamburger" src={menu} alt="menu" /></a>
         <ul className="header__dropdown">
-          <li><Link to="/logintwo">Login</Link></li>
+          <li><Link to="/signin">Login</Link></li>
           <li><Link to="/">Exchage</Link></li>
         </ul>
       </div>

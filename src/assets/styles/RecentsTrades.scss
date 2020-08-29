@@ -5,12 +5,13 @@
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   .trades__title {
-    background: /* $border-color */ #7B53FD;
+    background: #7B53FD;
     padding: 6px;
     font-size: 0.6em;
     padding-left: 10px;
     color: white;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
     text-align: center;
     font-weight: lighter;
   }
@@ -19,8 +20,8 @@
     overflow-y: visible;
   }
   .trades__table {
-    background: /* $panel-color */white;
-    font-size: 0.7em;
+    background: white;
+    font-size: 0.9em;
     color: $panel-color;
     width: 100%;
     thead {

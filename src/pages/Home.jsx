@@ -1,10 +1,7 @@
 import React from 'react';
-import Header from '../components/Header';
 import BuyandSell from '../components/BuyandSell/BuyandSell';
-import Buy from '../components/BuyandSell/Buy';
 import RecentsTrades from '../components/RecentsTrades';
 import Markets from '../components/Markets'
-import Footer from '../components/Footer';
 import Graphic from '../components/Graphic';
 import './Home.scss';
 

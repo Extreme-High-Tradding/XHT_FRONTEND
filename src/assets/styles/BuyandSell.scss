@@ -23,40 +23,29 @@
 }
 
 .form__values {
-  width: 100%;
-  margin: 0;
-  background-color: /* $panel-color */white;
-  font-size: 0.8em;
-  padding: 5px 10px;
-  border-right: 2px solid /* $border-color */ $panel-color;
-  border-bottom: none;
-  color: $font-color-primary;
+  height: 3em !important;
+  background-color: white !important;
+  border: none !important;
+  border-right: 2px solid $panel-color !important;
+  color:$panel-color !important;
+  margin: 0px !important;
+  padding-left: 5px !important;;
+  ::placeholder{
+    color:$panel-color ;
+    opacity: 1;
+    font-size: 1.2em;
+  }
 }
 
-.input__hidden {
-  display: none;
+.table__buy {
+  height: 100% !important;
+  border: none !important;
+  border-radius: none !important;
+  box-shadow: none !important;
 }
 
-form {
-  height: 100%;
-  border: none;
-  border-radius: none;
-  box-shadow: none;
-}
-
-form input{
-  /* margin: 0 3em; */
-  width: 20em;
-  height: 3em;
-  background-color: white;
-  border: none;
-  border-right: 2px solid $panel-color;
-  color:$panel-color;
-}
-::placeholder{
-  color:$panel-color;
-  opacity: 1;
-  font-size: 1.2em;
+.table__sell {
+  @extend .table__buy;
 }
 
 .orden__total {

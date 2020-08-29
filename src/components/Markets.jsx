@@ -1,155 +1,78 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class Markets extends Component {
 
-  constructor() {
-    super();
-    this.state = {
-      markets: []
-    };
-  };
+const Markets = () => {
 
-  async componentDidMount() {
-    const respuesta = await axios.get( 'https://sandbox.iexapis.com/stable/stock/aapl/peers?token=Tsk_2c0c88ee6ef14adb9250bfa7391d2c33 ' /* 'https://sandbox.iexapis.com/stable/stock/market/batch?symbols=TLSA,GOLD&types=quote&range=1m&last=5&token=Tsk_2c0c88ee6ef14adb9250bfa7391d2c33' */  /* ' https://sandbox.iexapis.com/stable/stock/TSLA/quote?token=Tpk_955576a7523c4a48b0e87e29d439a38e' */);
-    console.log('respuesta ', respuesta.data);
-    this.setState({
-      markets: respuesta.data
+  const [assets, setAssets] = React.useState([]);
+
+  React.useEffect(() => {
+    getShares()
+  }, []);
+
+  const getShares = async () => {
+    const data = await fetch("https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes?region=US&lang=en&symbols=TSLA%252CAAPL%252CGOOGL", {
+      "method": "GET",
+      "headers": {
+        "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
+        "x-rapidapi-key": "6c722fc672mshdcea6cb6a1150abp1d0ceejsn4c6c76f78d6c"
+      }
     })
-      /* .then(res => {
-        const market = res.data;
-        console.log(market.change);
-      }) */
+    const users = await data.json()
+    console.log(users.quoteResponse.result);
+    setAssets(users.quoteResponse.result)
   }
 
-  ponerFilas = () => {
-    this.state.markets.map((currency) => (
-      <tr key={currency}>
+  return(
+    <div className="trades__main">
+      <div className="trades__title">
+        <h1>Markets</h1>
+      </div>
+      <table className="trades__table">
+        <thead>
+          <tr>
+            <th className="markets__head">
+              Name
+            </th>
+            <th className="markets__head">
+              Symbol
+            </th>
+            <th className="markets__head">
+              Price
+            </th>
+            <th className="markets__head">
+              Last Price
+            </th>
+            <th className="markets__head">
+              Change
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+        {assets.map((item) => (
+        <tr key={item.symbol}>
           <td className="markets__pair">
-            { currency.symbol }
+            {item.longName}
           </td>
-          <td>
-            { currency.latestPrice }
-          </td>
-          <td>
-            { currency.changePercent }
-          </td>
-        </tr>
-    ))
-  }
-
-  render() {
-    console.log(this.state.market)
-    return (
-      <div className="trades__main">
-    <div className="trades__title">
-      <h1>Markets</h1>
-    </div>
-    <table className="trades__table">
-      <thead>
-        <tr>
-          <th className="markets__pair">
-            Pair
-          </th>
-          <th>
-            price
-          </th>
-          <th>
-            Change
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        {this.ponerFilas}
-        <tr>
           <td className="markets__pair">
-            BTC
+            {item.symbol}
           </td>
           <td>
-            0.020215
+            {(item.postMarketPrice).toFixed(2)}
           </td>
           <td>
-            11740.000
+            {(item.regularMarketPrice).toFixed(2)}
+          </td>
+          <td>
+            {(item.postMarketChange).toFixed(2)}
           </td>
         </tr>
-        <tr>
-          <td className="markets__pair">
-            GOLD
-          </td>
-          <td>
-            0.020215
-          </td>
-          <td>
-            11740.000
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
+        ))}
+        </tbody>
+      </table>
   </div>
-    )
-  }
+
+  )
 }
-
-/* const Markets = () => (
-  <div className="trades__main">
-    <div className="trades__title">
-      <h1>Markets</h1>
-    </div>
-    <table className="trades__table">
-      <thead>
-        <tr>
-          <th className="markets__pair">
-            Pair
-          </th>
-          <th>
-            Price
-          </th>
-          <th>
-            Change
-          </th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td className="markets__pair">
-            TESLA
-          </td>
-          <td>
-            0.020215
-          </td>
-          <td>
-            11740.000
-          </td>
-        </tr>
-        <tr>
-          <td className="markets__pair">
-            BTC
-          </td>
-          <td>
-            0.020215
-          </td>
-          <td>
-            11740.000
-          </td>
-        </tr>
-        <tr>
-          <td className="markets__pair">
-            GOLD
-          </td>
-          <td>
-            0.020215
-          </td>
-          <td>
-            11740.000
-          </td>
-        </tr>
-
-      </tbody>
-
-    </table>
-  </div>
-); */
 
 export default Markets;
