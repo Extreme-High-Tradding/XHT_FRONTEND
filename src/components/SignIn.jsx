@@ -1,11 +1,33 @@
-import React, { Component} from 'react';
+import React, { useState } from 'react';
+import InputAuth from './InputAuth';
 import { Link } from 'react-router-dom';
 import '../App.scss';
 
 import logomorado from '../assets/static/logomorado.png';
 
-class SignIn extends Component {
-  render() {
+const  SignIn =()=>{
+
+  const [ user, setUser ]= useState ('');
+  const [ password, setPassword] = useState ('');
+
+      function handleChange (name, value){
+
+
+        if(name === 'user'){
+          setUser(value)
+        }else{
+          setPassword(value)
+        }
+      };
+
+      function handleSubmit(){
+
+        const account = {user, password}
+        if (account){
+          console.log('account', account);
+        }
+      }
+
     return (
       <React.Fragment>
         <section className="login__section">
@@ -16,19 +38,29 @@ class SignIn extends Component {
                 <h2>Sign in</h2>
               </div>
               <div className="login__signin_input">
-                <input
-                  type="text"
-                  name="username"
-                  placeholder="Username or Email" />
+              <InputAuth
+                attribute = {{
+                id: 'user',
+                name: 'user',
+                type: 'text',
+                placeholder: 'username'
+              }}
+            handleChange={handleChange}
+            />
               </div>
               <div className="login__signin_input">
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password" />
+              <InputAuth
+              attribute = {{
+                id: 'password',
+                name: 'password',
+                type: 'password',
+                placeholder: 'password'
+              }}
+            handleChange={handleChange}
+            />
               </div>
               <div className="login__sigin_button">
-                <button className="button_si" type="submit" form="formsa" value="Submit">Sign in</button>
+                <button  onClick={handleSubmit} className="button_si" type="submit" form="formsu" value="Submit">Sign in</button>
                 <p>Don't you have an account? <Link to="/signup">Sign up</Link></p>
               </div>
             </form>
@@ -36,7 +68,6 @@ class SignIn extends Component {
         </section>
       </React.Fragment>
     )
-  }
 }
 
 export default SignIn;
