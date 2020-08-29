@@ -3,16 +3,16 @@ import '../../App.scss';
 
 
 class Buy extends Component {
-  handleChange  = (e) => {
+ /*  handleChange  = (e) => {
     console.log({
       name: e.target.name,
       value: e.target.value,
     });
-  };
+  }; */
 
-  handleClick  = (e) => {
+  /* handleClick  = (e) => {
     console.log("Button was clicked Buy");
-  };
+  }; */
   render () {
     return (
         <form className="table__buy" id="operation_form">
@@ -39,7 +39,7 @@ class Buy extends Component {
 
             <input
               id="user_id"
-              value="Jair"
+              value="1"
               name="user_id"
               type="hidden"
               className="input__hidden" />

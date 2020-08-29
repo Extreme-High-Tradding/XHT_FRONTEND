@@ -6,23 +6,24 @@
   grid-template-rows: auto;
   align-self: center;
   padding: 10px;
-  background: /* $panel-color */white;
+  background: white;
   border-radius: 10px;
 }
 
 .table__content {
   display: flex;
-  border: 2px solid /* $border-color */ $panel-color;
+  border: 2px solid $panel-color;
   margin: 20px 0px;
   .table__value {
     padding: 5px 20px;
     font-size: 1em;
     align-self: center;
-    color: /* $font-color-primary */ $panel-color;
+    color: $panel-color;
   }
 }
 
 .form__values {
+  width: 90% !important;
   height: 3em !important;
   background-color: white !important;
   border: none !important;
@@ -52,7 +53,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0px 10px;
-  color: /* $font-color-primary */$panel-color;
+  color: $panel-color;
 }
 
 .total__content {

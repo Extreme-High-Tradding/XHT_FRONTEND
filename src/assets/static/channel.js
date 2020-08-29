@@ -7,8 +7,8 @@ $(function() {
     chatsock.onmessage = function(message) {
         var data = JSON.parse(message.data);
             console.log(data);
-        /* $('#chat').append('<tr>' 
-            + '<td>' + data.timestamp + '</td>' 
+        /* $('#chat').append('<tr>'
+            + '<td>' + data.timestamp + '</td>'
             + '<td>' + data.handle + '</td>'
             + '<td>' + data.message + ' </td>'
         + '</tr>'); */
@@ -18,10 +18,10 @@ $(function() {
         var message = {
             operation_status: $('#operation_status').val(),
             operation_type: $('#operation_type').val(),
-            user: $('#user_id').val(),
-            amount: $('#amount').val(),
+            user_id: $('#user_id').val(),
+            amount_assets: $('#amount').val(),
             price: $('#price').val(),
-            asset: $('#asset').val(),
+            asset_id: $('#asset').val(),
         }
         chatsock.send(JSON.stringify(message));
         return false;

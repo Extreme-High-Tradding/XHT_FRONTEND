@@ -5,62 +5,44 @@ class Graphic extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isToggleOn: true
+      marketChart: 1,
+      market: ''
     }
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    this.setState(state => ({
-      isToggleOn: !state.isToggleOn
-    }));
+  handleClick = () => {
+    this.setState({
+      marketChart: 0,
+      market: 'NASDAQ:TSLA'
+    });
+  }
+
+  handleClickOne = () => {
+    this.setState({
+      marketChart: 1,
+      market: 'NASDAQ:AAPL'
+    });
+  }
+
+  handleClickTwo = () => {
+    this.setState({
+      marketChart: 2,
+      market: 'NASDAQ:GOOGL'
+    });
   }
 
   render() {
-    if (this.state.isToggleOn) {
-      return (
-        <React.Fragment>
-          <div>
-              <button type="submit" disabled onClick={this.handleClick} >TSLA</button>
-              <button type="submit" onClick={this.handleClick}>APPL</button>
-              <button type="submit" onClick={this.handleClick}>GOOGL</button>
-              <TradingViewWidget symbol="NASDAQ:TSLA" /*theme={Themes.DARK}*/
-              locale="fr"
-              autosize />
-          </div>
-        </React.Fragment>
-      )
-    } else {
-      return (
-        <React.Fragment>
-          <div>
-              <button onClick={this.handleClick} className="order1__buy">TSLA</button>
-              <button disabled onClick={this.handleClick} className="order__sell">APPL</button>
-              <button type="submit" onClick={this.handleClick}>GOOGL</button>
-              <TradingViewWidget symbol="NASDAQ:AAPL" /*theme={Themes.DARK}*/
-              locale="fr"
-              autosize />
-          </div>
-        </React.Fragment>
-      )
-    }
+    return(
+      <div>
+          <button type="submit" onClick={this.handleClick} >Tesla, Inc</button>
+          <button type="submit" onClick={this.handleClickOne}>Apple Inc.</button>
+          <button type="submit" onClick={this.handleClickTwo}>Alphabet Inc.</button>
+          <TradingViewWidget symbol={this.state.market} theme={Themes.LIGHT}
+          locale="fr"
+          autosize />
+      </div>
+    )
   }
 }
 
 export default Graphic;
-
-/* const Graphic = () => {
-
-  return(
-    <div>
-      <button >TSLA</button>
-      <button>APPL</button>
-      <button>GOOGL</button>
-      <TradingViewWidget symbol="NASDAQ:GOOGL" theme={Themes.DARK}
-      locale="fr"
-      autosize />
-    </div>
-  )
-};
-
-export default Graphic; */

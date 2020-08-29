@@ -7,19 +7,19 @@ class BuyandSell extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      isToggleOn: true
+      trade: true
     }
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
     this.setState(state => ({
-      isToggleOn: !state.isToggleOn
+      trade: !state.trade
     }));
   }
 
   render() {
-    if (this.state.isToggleOn) {
+    if (this.state.trade) {
       return (
         <React.Fragment>
           <div className="order__container">
