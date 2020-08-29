@@ -7,7 +7,7 @@ const SignUp = () => {
 
   const [ user, setUser ]= useState ('');
   const [ password, setPassword] = useState ('');
-  
+
   function handleChange (name, value){
     if(name === 'user'){
       setUser(value)
