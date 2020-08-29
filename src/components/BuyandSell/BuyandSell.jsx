@@ -24,8 +24,8 @@ class BuyandSell extends Component {
         <React.Fragment>
           <div className="order__container">
             <ul className="order__btn">
-              <li><button disabled onClick={this.handleClick} className="order1__buy">Buy</button></li>
-              <li><button onClick={this.handleClick} className="order__sell">Sell</button></li>
+              <li><button type="submit" disabled onClick={this.handleClick} className="order1__buy">Buy</button></li>
+              <li><button type="submit" onClick={this.handleClick} className="order__sell">Sell</button></li>
             </ul>
             <Buy />
           </div>

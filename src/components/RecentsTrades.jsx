@@ -3,7 +3,7 @@ import React from 'react';
 const RecentsTrades = () => (
   <div className="trades__main">
     <div className="trades__title">
-      <h1>RecentsTrades</h1>
+      <h1>Real-Time</h1>
     </div>
     <div className="table_content">
       <table className="trades__table">
@@ -21,28 +21,6 @@ const RecentsTrades = () => (
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
           <tr>
             <td>
               14:54:50

@@ -6,15 +6,15 @@ const Layout = (props) => {
   return (
     <React.Fragment>
       <div className="layout__container">
-        <div>
+        <React.Fragment>
           <Header />
-        </div>
-        <div>
+        </React.Fragment>
+        <React.Fragment>
           {props.children}
-        </div>
-        <div>
+        </React.Fragment>
+        <React.Fragment>
           <Footer />
-        </div>
+        </React.Fragment>
       </div>
     </React.Fragment>
   )

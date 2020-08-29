@@ -37,13 +37,6 @@
   }
 }
 
-.header__markets:hover ul, .header__nav--logo:hover {
-  display: block;
-  img {
-    transform: rotate(90deg);
-  }
-}
-
 .header__menu {
   padding-right: 30px;
 }
@@ -80,14 +73,14 @@
     padding: $panel-spacing;
   }
   a {
-    border: 2px solid $border-color;
+    border: 2px solid $font-color-inputs;
     border-radius: 5px;
     padding: 5px 25px;
     text-decoration: none;
     color: $font-color-primary;
   }
   a:hover {
-    background: $border-color;
+    background: $font-color-inputs;
   }
 }
 
@@ -132,7 +125,7 @@
       margin: 0 auto;
     }
     li:hover {
-      background: $border-color;
+      background: $font-color-inputs;
     }
   }
 
@@ -161,14 +154,14 @@
     padding: $panel-spacing;
   }
   a {
-    border: 2px solid $border-color;
+    border: 2px solid $font-color-inputs;
     border-radius: 5px;
     padding: 5px 25px;
     text-decoration: none;
     color: $font-color-primary;
   }
   a:hover {
-    background: $border-color;
+    background: $font-color-inputs;
   }
   }
 }

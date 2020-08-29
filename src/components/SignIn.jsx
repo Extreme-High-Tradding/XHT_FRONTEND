@@ -3,15 +3,13 @@ import InputAuth from './InputAuth';
 import { Link } from 'react-router-dom';
 import '../App.scss';
 
-import logo from '../assets/static/logo_header.png';
-import log from '../assets/static/FondoHigh.png';
 import logomorado from '../assets/static/logomorado.png';
 
 const  SignIn =()=>{
 
   const [ user, setUser ]= useState ('');
   const [ password, setPassword] = useState ('');
-      
+
       function handleChange (name, value){
 
 
@@ -21,20 +19,17 @@ const  SignIn =()=>{
           setPassword(value)
         }
       };
-    
+
       function handleSubmit(){
-    
+
         const account = {user, password}
         if (account){
           console.log('account', account);
         }
       }
-    
+
     return (
       <React.Fragment>
-        {/* <div className="login__header">
-          <img className="login__header_image" src= {logo} alt=""/>
-        </div> */}
         <section className="login__section">
           <div className="login__container">
             <form id="formsa" className="login__signin_input">
