@@ -6,37 +6,37 @@ class Graphic extends Component {
     super(props)
     this.state = {
       marketChart: 1,
-      market: ''
+      market: 'COINBASE:BTCUSD'
     }
   }
 
   handleClick = () => {
     this.setState({
       marketChart: 0,
-      market: 'NASDAQ:TSLA'
+      market: 'COINBASE:BTCUSD'
     });
   }
 
   handleClickOne = () => {
     this.setState({
       marketChart: 1,
-      market: 'NASDAQ:AAPL'
+      market: 'COINBASE:ETHUSD'
     });
   }
 
   handleClickTwo = () => {
     this.setState({
       marketChart: 2,
-      market: 'NASDAQ:GOOGL'
+      market: 'COINBASE:BCHUSD'
     });
   }
 
   render() {
     return(
       <div>
-          <button type="submit" onClick={this.handleClick} >Tesla, Inc</button>
-          <button type="submit" onClick={this.handleClickOne}>Apple Inc.</button>
-          <button type="submit" onClick={this.handleClickTwo}>Alphabet Inc.</button>
+          <button type="submit" onClick={this.handleClick} >Bitcoin</button>
+          <button type="submit" onClick={this.handleClickOne}>Ethereum</button>
+          <button type="submit" onClick={this.handleClickTwo}>Bitcoin Cash</button>
           <TradingViewWidget symbol={this.state.market} theme={Themes.LIGHT}
           locale="fr"
           autosize />

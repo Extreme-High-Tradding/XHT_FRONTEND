@@ -1,76 +1,71 @@
-import React from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
-const Markets = () => {
+class Markets extends Component {
 
-  const [assets, setAssets] = React.useState([]);
-
-  React.useEffect(() => {
-    getShares()
-  }, []);
-
-  const getShares = async () => {
-    const data = await fetch("https://apidojo-yahoo-finance-v1.p.rapidapi.com/market/get-quotes?region=US&lang=en&symbols=TSLA%252CAAPL%252CGOOGL", {
-      "method": "GET",
-      "headers": {
-        "x-rapidapi-host": "apidojo-yahoo-finance-v1.p.rapidapi.com",
-        "x-rapidapi-key": "6c722fc672mshdcea6cb6a1150abp1d0ceejsn4c6c76f78d6c"
+  constructor(props) {
+    super(props);
+      this.state = {
+        cryptos: [],
+        cryptor: []
       }
-    })
-    const users = await data.json()
-    console.log(users.quoteResponse.result);
-    setAssets(users.quoteResponse.result)
+    }
+
+  componentDidMount() {
+    axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,BCH&tsyms=USD&e=Coinbase&extraParams=your_app_name')
+      .then(res => {
+        const cryptos = res.data;
+        console.log(cryptos);
+        this.setState({cryptos: cryptos.RAW})
+        console.log('Pruebo Objetos', (this.state.cryptos));
+      })
+    }
+
+
+  render() {
+    return(
+      <div className="trades__main">
+        <div className="trades__title">
+          <h1>Markets</h1>
+        </div>
+        <table className="trades__table">
+          <thead>
+            <tr>
+              <th className="markets__head">
+                Symbol
+              </th>
+              <th className="markets__head">
+                Price
+              </th>
+              <th className="markets__head">
+                Last Price (24h)
+              </th>
+              <th className="markets__head">
+                Change (24h)
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+          {Object.keys(this.state.cryptos).map((key) => (
+          <tr key={key}>
+          <td className="markets__pair--symbol">
+            {key}
+          </td>
+          <td>
+            ${this.state.cryptos[key].USD.PRICE}
+          </td>
+          <td>
+          {this.state.cryptos[key].USD.LOW24HOUR}
+          </td>
+          <td className="markets__pair--symbol">
+            ${this.state.cryptos[key].USD.CHANGEPCT24HOUR.toFixed(2)}%
+          </td>
+        </tr>))}
+          </tbody>
+        </table>
+    </div>
+    )
   }
-
-  return(
-    <div className="trades__main">
-      <div className="trades__title">
-        <h1>Markets</h1>
-      </div>
-      <table className="trades__table">
-        <thead>
-          <tr>
-            <th className="markets__head">
-              Name
-            </th>
-            <th className="markets__head">
-              Symbol
-            </th>
-            <th className="markets__head">
-              Price
-            </th>
-            <th className="markets__head">
-              Last Price
-            </th>
-            <th className="markets__head">
-              Change
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-        {assets.map((item) => (
-        <tr key={item.symbol}>
-          <td className="markets__pair">
-            {item.longName}
-          </td>
-          <td className="markets__pair">
-            {item.symbol}
-          </td>
-          <td>
-            {(item.postMarketPrice).toFixed(2)}
-          </td>
-          <td>
-            {(item.regularMarketPrice).toFixed(2)}
-          </td>
-          <td>
-            {(item.postMarketChange).toFixed(2)}
-          </td>
-        </tr>
-        ))}
-        </tbody>
-      </table>
-  </div>
-
-  )
 }
 
 export default Markets;

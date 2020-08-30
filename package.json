@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/Extreme-High-Tradding/XHT_FRONTEND#readme",
   "dependencies": {
+    "axios": "^0.20.0",
     "express": "^4.17.1",
     "json-server": "^0.16.1",
     "livereload": "^0.9.1",
@@ -50,7 +51,6 @@
     "sass-loader": "^9.0.3",
     "style-loader": "^1.2.1",
     "svg-inline-loader": "^0.8.2",
-    "universal-cookie": "^4.0.3",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"
