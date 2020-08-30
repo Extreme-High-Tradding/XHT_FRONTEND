@@ -8,7 +8,6 @@
     "startser": "json-server --watch db.json --port 3001",
     "startdev": "webpack-dev-server --mode development --open",
     "postinstall": "webpack -p",
-    "heroku-postbuild": "ng build --prod" ,
     "build": "webpack --mode production",
     "test": "echo \"Error: no test specified\" && exit "
   },
