@@ -23,7 +23,9 @@ $(function() {
             price: $('#price').val(),
             asset_id: $('#asset').val(),
         }
+        console.log('hola mun')
         chatsock.send(JSON.stringify(message));
+        
         return false;
     });
 });

@@ -1,13 +1,18 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+
 
 module.exports = {
   devtool: 'cheap-module-source-map',
-  entry: './src/index.js',
+  entry:  [
+    'react-hot-loader/patch',
+    './src/index.js'
+  ],
   output: {
     filename: 'bundle.[hash].js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
   },
   module: {
     rules: [

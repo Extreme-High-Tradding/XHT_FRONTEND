@@ -45,13 +45,13 @@ class Buy extends Component {
               className="input__hidden" />
             <input
               id="operation_type"
-              value="false"
+              value="False"
               name="operation_type"
               type="hidden"
               className="input__hidden" />
             <input
               id="operation_status"
-              value="false"
+              value="False"
               name="operation_status"
               type="hidden"
               className="input__hidden" />
