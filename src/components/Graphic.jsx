@@ -33,7 +33,7 @@ class Graphic extends Component {
 
   render() {
     return(
-      <div>
+      <div className="graphic__container">
           <button type="submit" onClick={this.handleClick} >Bitcoin</button>
           <button type="submit" onClick={this.handleClickOne}>Ethereum</button>
           <button type="submit" onClick={this.handleClickTwo}>Bitcoin Cash</button>
