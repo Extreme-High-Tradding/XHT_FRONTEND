@@ -5,8 +5,7 @@ import logomobile from '../assets/static/FondoHigh.png';
 import menu from '../assets/static/menu.png';
 import '../App.scss';
 
-class Header extends React.Component {
-  render() {
+const Header = () => {
     return (
     <header className="header__main">
       <div className="header__container">
@@ -20,13 +19,14 @@ class Header extends React.Component {
       <div className="header__menu">
         <a href="#"><img className="img--hamburger" src={menu} alt="menu" /></a>
         <ul className="header__dropdown">
-          <li><Link to="/signin">Login</Link></li>
+          <li className="content__balance">Balance: <a id="balance" className="balance_value">100.000</a>USD</li>
+          {/* <li><Link to="/signin">Login</Link></li> */}
           <li><Link to="/">Exchage</Link></li>
         </ul>
       </div>
     </header>
     )
   }
-}
+
 
 export default Header;

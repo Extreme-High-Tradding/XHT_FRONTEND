@@ -17,7 +17,8 @@
   }
   .table_content {
     width: 100%;
-    overflow-y: visible;
+    height: 100px !important;
+    background: white !important;
   }
   .trades__table {
     background: white;
@@ -33,4 +34,8 @@
       padding: 15px;
     }
   }
+}
+
+.real__table {
+  height: 80px !important;
 }

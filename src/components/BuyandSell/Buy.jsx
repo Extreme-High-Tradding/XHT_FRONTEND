@@ -2,24 +2,12 @@ import React, { Component } from 'react';
 import '../../App.scss';
 
 
-class Buy extends Component {
- /*  handleChange  = (e) => {
-    console.log({
-      name: e.target.name,
-      value: e.target.value,
-    });
-  }; */
-
-  /* handleClick  = (e) => {
-    console.log("Button was clicked Buy");
-  }; */
-  render () {
+const Buy = () => {
     return (
-        <form className="table__buy" id="operation_form">
+        <form className="table__buy" id="buy_form">
           <div className="table__content">
             <input
               id="price"
-              onChange={this.handleChange}
               name="price"
               placeholder="Price"
               type="text"
@@ -29,7 +17,6 @@ class Buy extends Component {
           <div className="table__content">
             <input
               id="amount"
-              onChange={this.handleChange}
               name="amount"
               placeholder="Amount"
               type="text"
@@ -51,7 +38,7 @@ class Buy extends Component {
               className="input__hidden" />
             <input
               id="operation_status"
-              value="False"
+              value="True"
               name="operation_status"
               type="hidden"
               className="input__hidden" />
@@ -70,38 +57,13 @@ class Buy extends Component {
             </div>
           </div>
           <div className="btn__order">
-            <button 
-              onClick={this.handleClick}
+            <button
               type="submit"
               className="btn__buy">Buy</button>
           </div>
         </form>
     )
   }
-}
 
-/* const Buy = () => (
-  <div className="table__buy">
-    <div className="table__content">
-      <input placeholder="Price" type="text" className="form__values" />
-      <span className="table__value">USD</span>
-    </div>
-    <div className="table__content">
-      <input placeholder="Amount" type="text" className="form__values" />
-      <span className="table__value">USD</span>
-    </div>
-
-    <div className="orden__total">
-      <label className="orden__label">Total</label>
-      <div className="total__content">
-        <span className="total__content_amount">0.0000000000</span>
-        <span className="total__content_account">USD</span>
-      </div>
-    </div>
-    <div className="btn__order">
-      <button type="button" className="btn__buy">Buy</button>
-    </div>
-  </div>
-); */
 
 export default Buy;
