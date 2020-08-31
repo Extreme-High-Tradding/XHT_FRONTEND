@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --progress -p --config webpack.config.js --watch",
+    "start": "node server.js",
     "startser": "json-server --watch db.json --port 3001",
     "startdev": "webpack-dev-server --mode development --open",
     "postinstall": "webpack -p",
