@@ -14,9 +14,9 @@ class Markets extends Component {
     axios.get('https://min-api.cryptocompare.com/data/pricemultifull?fsyms=BTC,ETH,BCH&tsyms=USD&e=Coinbase&extraParams=your_app_name')
       .then(res => {
         const cryptos = res.data;
-        /* console.log(cryptos); */
+        console.log(cryptos);
         this.setState({cryptos: cryptos.RAW})
-        /* console.log('Pruebo Objetos', (this.state.cryptos)); */
+        console.log('Pruebo Objetos', (this.state.cryptos));
       })
     }
 
