@@ -4,7 +4,22 @@ import Buy from './Buy';
 import '../../App.scss';
 
 class BuyandSell extends Component {
-  constructor(props) {
+  render(){
+    return(
+      <React.Fragment>
+        <div className="order__container">
+          <Sell />
+        </div>
+        <br/>
+        <div className="order__container">
+          <Buy />
+        </div>
+      </React.Fragment>
+    )
+  }
+
+
+  /* constructor(props) {
     super(props)
     this.state = {
       trade: true
@@ -16,16 +31,16 @@ class BuyandSell extends Component {
     this.setState(state => ({
       trade: !state.trade
     }));
-  }
+  } */
 
-  render() {
+  /* render() {
     if (this.state.trade) {
       return (
         <React.Fragment>
           <div className="order__container">
             <ul className="order__btn">
-              <li><button type="submit" disabled onClick={this.handleClick} className="order1__buy">Buy</button></li>
-              <li><button type="submit" onClick={this.handleClick} className="order__sell">Sell</button></li>
+              <li><button type="button" onClick={this.handleClick} className="order1__buy">Buy</button></li>
+              <li><button onClick={this.handleClick} className="order__sell">Sell</button></li>
             </ul>
             <Buy />
           </div>
@@ -36,8 +51,8 @@ class BuyandSell extends Component {
         <React.Fragment>
           <div className="order__container">
             <ul className="order__btn">
-              <li><button onClick={this.handleClick} className="order1__buy">Buy</button></li>
-              <li><button disabled onClick={this.handleClick} className="order__sell">Sell</button></li>
+               <li><button onClick={this.handleClick} className="order1__buy">Buy</button></li>
+              <li><button type="button" onClick={this.handleClick} className="order__sell">Sell</button></li>
             </ul>
             <Sell />
           </div>
@@ -45,7 +60,7 @@ class BuyandSell extends Component {
       )
     }
   }
-
+ */
 }
 
 export default BuyandSell;

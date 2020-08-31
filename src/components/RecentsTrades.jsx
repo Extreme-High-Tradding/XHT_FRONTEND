@@ -10,149 +10,27 @@ const RecentsTrades = () => (
         <thead>
           <tr>
             <th>
-              Time
+              Id
             </th>
             <th>
+              Operation
+            </th>
+            <th>
+              Asset
+            </th>
+            <th >
               Amount
             </th>
-            <th>
-              Price
+            <th >
+              Open
+            </th>
+            <th >
+              Close
             </th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
-          <tr>
-            <td>
-              14:54:50
-            </td>
-            <td>
-              0.020215
-            </td>
-            <td>
-              11740.000
-            </td>
-          </tr>
+        <tbody id="real_time-table" className="real__table">
+
         </tbody>
 
       </table>
