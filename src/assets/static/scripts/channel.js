@@ -37,7 +37,7 @@ $(function() {
             + '</tr>');
             }
             if (data[0].model === 'app.financial') {
-                document.getElementById('balance').innerHTML = data[0].fields.balance
+                document.getElementById('balance').innerHTML = '$' + data[0].fields.balance + 'USD'
             }
     };
 

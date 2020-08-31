@@ -19,7 +19,7 @@ const Header = () => {
       <div className="header__menu">
         <a href="#"><img className="img--hamburger" src={menu} alt="menu" /></a>
         <ul className="header__dropdown">
-          <li className="content__balance">Balance: <a id="balance" className="balance_value">100.000</a>USD</li>
+          <li className="content__balance">Balance: <a id="balance" className="balance_value">100.000</a></li>
           {/* <li><Link to="/signin">Login</Link></li> */}
           <li><Link to="/">Exchage</Link></li>
         </ul>
