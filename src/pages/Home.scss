@@ -31,6 +31,7 @@
         text-decoration: none;
         color: $font-color-primary;
         background:$panel-color;
+        box-shadow: inset 0 0 10px #f0f;
       }
     button:hover {
         background: $font-color-inputs;

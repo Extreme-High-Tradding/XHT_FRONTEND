@@ -59,7 +59,8 @@ const Buy = () => {
           <div className="btn__order">
             <button
               type="submit"
-              className="btn__buy">Buy</button>
+              className="btn__buy"
+              alt="buy">Buy</button>
           </div>
         </form>
     )

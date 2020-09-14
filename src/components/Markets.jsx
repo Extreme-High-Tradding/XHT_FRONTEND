@@ -17,7 +17,7 @@ const Markets = () => {
     try {
       document.getElementById('closing').innerHTML = crypto.RAW.BTC.USD.PRICE;
     } catch (e) {
-      console.log('NO EXISTEN POSICIONES ABIERTAS')
+      /* console.log('NO EXISTEN POSICIONES ABIERTAS') */
     }
 
     console.log(crypto.RAW.BTC.USD.PRICE);

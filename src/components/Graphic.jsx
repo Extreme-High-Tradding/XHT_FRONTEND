@@ -34,7 +34,7 @@ class Graphic extends Component {
   render() {
     return(
       <div className="graphic__container">
-          <button type="submit" onClick={this.handleClick} >Bitcoin</button>
+          <button type="submit" onClick={this.handleClick}>Bitcoin</button>
           <button type="submit" onClick={this.handleClickOne}>Ethereum</button>
           <button type="submit" onClick={this.handleClickTwo}>Bitcoin Cash</button>
           <TradingViewWidget symbol={this.state.market} theme={Themes.LIGHT}

@@ -75,7 +75,8 @@
   padding: 5px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+ /*  box-shadow: inset 0 0 10px #000; */
 }
 
 .btn__buy {
@@ -85,7 +86,8 @@
   padding: 5px;
   font-size: 1.2em;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
+  /* box-shadow: inset 0 0 10px #000; */
 }
 
 .order__btn {
@@ -112,4 +114,51 @@
     color: $font-color-primary;
     background: $btn-sell-color;
   }
+}
+
+
+
+
+.label__sell {
+  position: relative !important;
+  padding: 5px 0 !important;
+  cursor: pointer !important;
+
+}
+
+.label__sell .input__sell {
+  appearance: none;
+  display: none;
+  text-align: center;
+}
+
+.label__sell .span__sell {
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 25px;
+  background: #fff;
+  border-radius: 40px;
+  box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.2),
+              inset 0 2px 2px rgba(0, 0, 0, 0.2),
+              inset 0 -1px 1px rgba(0, 0, 0, 0.2);
+}
+
+.label__sell .indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background: linear-gradient( to bottom, #444, #fff);
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5),
+              inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+  transform: scale(0.9);
+}
+
+.label__sell .input__sell:checked ~ .indicator
+{
+  left: 40px;
 }

@@ -5,6 +5,11 @@ import '../../App.scss';
 const Sell = () => {
     return(
       <form className="table__sell" id="sell_form">
+      <label className="label__sell">
+        <input  className="input__sell" type="checkbox"/>
+        <span className="span__sell" ></span>
+        <i className="indicator"></i>
+      </label>
           <div className="table__content">
             <input
               id="pricesell"

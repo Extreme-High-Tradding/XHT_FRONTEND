@@ -3,14 +3,14 @@
 // Colors
 $background-color: #32256a;
 $panel-color: #2d225a;
-$btn-sell-color: #ff0000;
-$btn-buy-color: #158a13;
-$font-color-primary: #fbfaff;
+$btn-sell-color: #a80000;
+$btn-buy-color:#0c640c;
+$font-color-primary: #ffffff;
 $border-color: #fe3daa ;
 $font-color-inputs: #7B53FD;
 //fonts
 
-//$primary-font: 'Lato', sans-serif;
+$primary-font: 'Lato', sans-serif;
 
 //fonts-size
 
@@ -20,6 +20,13 @@ $button-text: 1.2em;
 //Spacing
 
 $panel-spacing: 0.5em;
+
+//media queries
+
+$layout-breakpoint-mobile: 480px;
+$layout-breakpoint-table: 768px;
+$layout-breakpoint-desk: 992px;
+$layout-breakpoint-deskmax: 1200px;
 
 body{
   font-family: 'Lato', sans-serif;

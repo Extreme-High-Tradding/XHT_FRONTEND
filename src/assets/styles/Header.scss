@@ -1,172 +1,90 @@
 @import "../../GlobalVars";
 
-.header__main {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  /* margin: $panel-spacing; */
+  height: 85px;
   background: $panel-color;
   color: $font-color-primary;
-}
-
-.header__container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 30px;
-  a {
-    text-decoration: none;
-    color: $font-color-primary;
+  &__logo {
+    padding-left: 30px;
   }
-}
-
-.header__img {
-  width: 120px;
-  height: 40px;
-  margin-bottom: -10px;
-}
-
-.header__markets {
-  list-style: none;
-  img {
-    position: absolute;
-    width: 10px;
-    top: 4px;
-    right: -20px;
-  }
-}
-
-.header__menu {
-  padding-right: 30px;
-}
-
-.header__despliegue  {
-  position: absolute;
-  top: 40px;
-}
-
-.header__deploy {
-  display: none;
-  list-style: none;
-  background: $panel-color;
-  padding: 10px;
-  position: relative;
-  top: 70px;
-  left: -10px;
-  li {
-    padding: 5px;
-  }
-    a {
-      text-decoration: none;
-    }
-}
-
-.header__deploy li:hover {
-  background: $border-color;
-}
-
-.header__btn {
-  display: flex;
-  li {
-    list-style: none;
-    padding: $panel-spacing;
-  }
-  a {
-    border: 2px solid $font-color-inputs;
-    border-radius: 5px;
-    padding: 5px 25px;
-    text-decoration: none;
-    color: $font-color-primary;
-  }
-  a:hover {
-    background: $font-color-inputs;
-  }
-}
-
-@media (min-width: 100px) and (max-width: 414px) {
-  .header__img {
+  &__logo--desk {
     display: none;
-  }
-
-  .header__img--mobile {
-    width: 50px;
-  }
-
-  .img--hamburger {
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    width: 40px;
-  }
-
-  .header__menu {
-    align-items: center;
-    padding-right: 0px;
-  }
-
-  .header__dropdown {
-    display: none;
-    position: relative;
-    z-index: 5;
-    list-style: none;
-    background: $panel-color;
-    padding: 0px;
-    top: 100px;
-    li {
-      display: flex;
-      justify-content: center;
-    }
-    a {
-      text-decoration: none;
-      font-size: 1.2em;
-      color: $font-color-primary;
-      padding: 20px;
-      margin: 0 auto;
-    }
-    li:hover {
-      background: $font-color-inputs;
+    width: 140px;
+    height: 50px;
+    margin-bottom: -10px;
+    @include media(desktop-s) {
+      display: block;
     }
   }
-
-  .header__menu:hover ul, .header__dropdown:hover {
+  &__logo--mobile {
     display: block;
+    width: 60px;
+    @include media(desktop-s) {
+      display: none;
+    }
   }
-}
-
-@media (min-width: 415px) and (max-width: 2720px) {
-  .header__img {
-    display: block;
+  &__balance {
+    text-align: center;
   }
-
-  .header__img--mobile {
-    display: none;
-  }
-
-  .img--hamburger {
-    display: none;
-  }
-
-  .header__dropdown {
-    display: flex;
-  li {
+  &__navegation {
     list-style: none;
-    padding: $panel-spacing;
-  }
-  a {
-    border: 2px solid $font-color-inputs;
-    border-radius: 5px;
-    padding: 5px 25px;
-    text-decoration: none;
-    color: $font-color-primary;
-  }
-  a:hover {
-    background: $font-color-inputs;
-  }
+    &--hamburger {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      display: block;
+      width: 40px;
+      @include media(desktop-s) {
+        display: none;
+      }
+    }
+    &:hover ul, &--dropdown {
+      display: block;
+      @include media(desktop-s) {
+        display: flex;
+      }
+    }
+    &--dropdown {
+      display: none;
+      position: relative;
+      top: 100px;
+      z-index: 5;
+      padding: 0px;
+      background: $panel-color;
+      @include media(desktop-s) {
+        top: 0;
+        display: flex;
+      }
+      li {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: $panel-spacing;
+        a {
+          text-decoration: none;
+          color: $font-color-primary;
+          font-size: 1.2em;
+          padding: 20px;
+          margin: 0 auto;
+          @include media(desktop-s) {
+            border: 2px solid $font-color-inputs;
+            border-radius: 5px;
+            padding: 5px 25px;
+            &:hover {
+              background: $font-color-inputs;
+            }
+          }
+        }
+        &:hover {
+          background: $font-color-inputs;
+          @include media(desktop-s) {
+            background: none;
+          }
+        }
+      }
+    }
   }
 }
-
-.balance_value {
-  
-}
-

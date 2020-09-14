@@ -30,9 +30,7 @@ const RecentsTrades = () => (
           </tr>
         </thead>
         <tbody id="real_time-table" className="real__table">
-
         </tbody>
-
       </table>
     </div>
 
