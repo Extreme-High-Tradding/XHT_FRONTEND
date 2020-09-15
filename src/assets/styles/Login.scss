@@ -3,7 +3,6 @@
 .login__section{
   display: flex;
   justify-content: center;
-  //border: 1px solid yellow;
   padding: 1em;
   padding-top: 1.5em;
   height: 80vh;
@@ -11,7 +10,6 @@
 
 .login__header{
   margin: 1em;
-  
   &_image{
     height: 50px;
   }

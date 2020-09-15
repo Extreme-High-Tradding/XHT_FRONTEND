@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TradingViewWidget, { Themes } from 'react-tradingview-widget';
-
 class Graphic extends Component {
   constructor(props) {
     super(props)
@@ -33,14 +32,14 @@ class Graphic extends Component {
 
   render() {
     return(
-      <div className="graphic__container">
+      <React.Fragment>
           <button type="submit" onClick={this.handleClick}>Bitcoin</button>
           <button type="submit" onClick={this.handleClickOne}>Ethereum</button>
           <button type="submit" onClick={this.handleClickTwo}>Bitcoin Cash</button>
           <TradingViewWidget symbol={this.state.market} theme={Themes.LIGHT}
           locale="fr"
           autosize />
-      </div>
+      </React.Fragment>
     )
   }
 }

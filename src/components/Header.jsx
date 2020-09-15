@@ -16,10 +16,6 @@ const Header = () => {
           </a>
         </div>
       </div>
-      <div className="header__balance">
-        <h3>Balance:</h3>
-        <a id="balance" className="header__navegation--value" alt="balance"></a>
-      </div>
       <div className="header__navegation">
         <a href="#"><img className="header__navegation--hamburger" src={menu} alt="menu" /></a>
         <ul className="header__navegation--dropdown">

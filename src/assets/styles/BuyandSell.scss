@@ -1,5 +1,21 @@
 @import "../../GlobalVars";
 
+.order {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 10px;
+  align-self: center;
+  border-radius: 5px;
+  @include media(tablet) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10px;
+  }
+  @include media(desktop-s) {
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+  }
+}
+
 .order__container {
   display: grid;
   grid-template-columns: 1fr;
@@ -10,155 +26,59 @@
   border-radius: 10px;
 }
 
-.table__content {
-  display: flex;
-  border: 2px solid $panel-color;
-  margin: 20px 0px;
-  .table__value {
-    padding: 5px 20px;
-    font-size: 1em;
-    align-self: center;
-    color: $panel-color;
-  }
-}
-
-.form__values {
-  width: 90% !important;
-  height: 3em !important;
-  background-color: white !important;
-  border: none !important;
-  border-right: 2px solid $panel-color !important;
-  color:$panel-color !important;
-  margin: 0px !important;
-  padding-left: 5px !important;;
-  ::placeholder{
-    color:$panel-color ;
-    opacity: 1;
-    font-size: 1.2em;
-  }
-}
-
-.table__buy {
+.form {
   height: 100% !important;
   border: none !important;
   border-radius: none !important;
   box-shadow: none !important;
-}
-
-.table__sell {
-  @extend .table__buy;
-}
-
-.orden__total {
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 10px;
-  color: $panel-color;
-}
-
-.total__content {
-  text-align: right;
-}
-
-.total__content_account {
-  padding-left: 10px;
-}
-
-.btn__order {
-  padding: 20px 10px 10px 10px;
-}
-
-.btn__sell {
-  width: 100%;
-  background: $btn-sell-color;
-  color: $font-color-primary;
-  padding: 5px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 10px;
- /*  box-shadow: inset 0 0 10px #000; */
-}
-
-.btn__buy {
-  width: 100%;
-  background: $btn-buy-color;
-  color: $font-color-primary;
-  padding: 5px;
-  font-size: 1.2em;
-  border: none;
-  border-radius: 10px;
-  /* box-shadow: inset 0 0 10px #000; */
-}
-
-.order__btn {
-  display: flex;
-  padding: 0px;
-  list-style: none;
-}
-
-.order__btn {
-  justify-content: space-around;
-  .order1__buy {
-    font-size: $button-text;
-    width: 100%;
-    border: none;
-    background: $btn-buy-color;
-    padding: 5px 70px;
-    color: $font-color-primary;
+  &__inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
-  .order__sell {
-    font-size: $button-text;
-    width: 100%;
-    border: none;
-    padding: 5px 70px;
-    color: $font-color-primary;
-    background: $btn-sell-color;
+  &__info {
+    display: flex;
+    align-items: center;
+    border: 1px solid $panel-color !important;
+    margin-bottom: 5px;
+    &--price, &--amount {
+      width: 125px !important;
+      height: 35px !important;
+      border: none !important;
+      margin: 0px 0px !important;
+      padding: 0px 5px;
+      border-right: 1px solid $panel-color !important;
+      @include media(tablet) {
+        width: 130px !important;
+      }
+      @include media(desktop-s) {
+        width: 125px !important;
+      }
+    }
+    &--symbol {
+      width: 40px;
+    }
   }
-}
-
-
-
-
-.label__sell {
-  position: relative !important;
-  padding: 5px 0 !important;
-  cursor: pointer !important;
-
-}
-
-.label__sell .input__sell {
-  appearance: none;
-  display: none;
-  text-align: center;
-}
-
-.label__sell .span__sell {
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 25px;
-  background: #fff;
-  border-radius: 40px;
-  box-shadow: inset 0 2px 15px rgba(0, 0, 0, 0.2),
-              inset 0 2px 2px rgba(0, 0, 0, 0.2),
-              inset 0 -1px 1px rgba(0, 0, 0, 0.2);
-}
-
-.label__sell .indicator {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25px;
-  height: 25px;
-  background: linear-gradient( to bottom, #444, #fff);
-  border-radius: 50%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5),
-              inset 0 1px 1px rgba(255, 255, 255, 0.1);
-  transition: 0.5s;
-  transform: scale(0.9);
-}
-
-.label__sell .input__sell:checked ~ .indicator
-{
-  left: 40px;
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    &--labelname, &--amount, &--symbol {
+      padding-right: 5px;;
+    }
+    &--btn-buy {
+      width: 130px;
+      background: $btn-buy-color;
+      color: $font-color-primary;
+      padding: 5px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 5px;
+    }
+    &--btn-sell {
+      @extend .form__content--btn-buy;
+      background: $btn-sell-color;
+    }
+  }
 }

@@ -13,13 +13,17 @@ const Home = () => {
             <Graphic />
           </div>
           <div className="container__tools">
-              <div className="test">
+              <div className="container__tools--buyandsell">
+                <div className="container__balance">
+                  <h3>Balance:</h3>
+                  <a id="balance" className="header__navegation--value" alt="balance">100.000</a>
+                </div>
                 <BuyandSell />
               </div>
-              <div className="test1">
+              <div className="container__tools--trades">
                 <RecentsTrades />
               </div>
-              <div className="test2">
+              <div className="container__tools--markets">
                 <Markets />
               </div>
           </div>

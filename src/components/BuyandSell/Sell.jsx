@@ -4,32 +4,27 @@ import '../../App.scss';
 
 const Sell = () => {
     return(
-      <form className="table__sell" id="sell_form">
-      <label className="label__sell">
-        <input  className="input__sell" type="checkbox"/>
-        <span className="span__sell" ></span>
-        <i className="indicator"></i>
-      </label>
-          <div className="table__content">
+      <form className="form" id="sell_form">
+        <div className="form__inputs">
+          <div className="form__info">
             <input
               id="pricesell"
               name="price"
               placeholder="Price"
               type="text"
-              className="form__values" />
-            <span className="table__value">USD</span>
+              className="form__info--price" alt="price"/>
+              <div className="form__info--symbol">
+                <span>USD</span>
+              </div>
           </div>
-          <div className="table__content">
+          <div className="form__info">
             <input
               id="amountsell"
               name="amount"
               placeholder="Amount"
               type="text"
-              className="form__values" />
-            <span className="table__value">USD</span>
-          </div>
-
-          <input
+              className="form__info--amount" alt="amount"/>
+              <input
               id="usersell_id"
               value="1"
               name="user_id"
@@ -53,19 +48,24 @@ const Sell = () => {
               name="asset"
               type="hidden"
               className="input__hidden" />
-
-          <div className="orden__total">
-            <label className="orden__label">Total</label>
-            <div className="total__content">
-              <span className="total__content_amount">0.0000000000</span>
-              <span className="total__content_account">USD</span>
+              <div className="form__info--symbol">
+                <span>BTC</span>
+              </div>
+          </div>
+        </div>
+            <div className="form__content">
+              <div className="form__content--label">
+                <p className="form__content--labelname">Total</p>
+                <span className="form__content--amount">0.0000000000</span>
+                <span className="form__content--symbol">USD</span>
+              </div>
+              <div className="form__content--btn">
+                <button
+                  type="submit"
+                  className="form__content--btn-sell"
+                  alt="sell">Sell</button>
+              </div>
             </div>
-          </div>
-          <div className="btn__order">
-            <button
-              type="submit"
-              className="btn__sell">Sell</button>
-          </div>
         </form>
     )
   }
