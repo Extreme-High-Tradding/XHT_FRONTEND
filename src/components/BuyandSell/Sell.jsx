@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../../App.scss';
 
 
-const Sell = () => {
+const Sell = ({value}) => {
     return(
       <form className="form" id="sell_form">
         <div className="form__inputs">
@@ -49,7 +49,7 @@ const Sell = () => {
               type="hidden"
               className="input__hidden" />
               <div className="form__info--symbol">
-                <span>BTC</span>
+                <span>{value}</span>
               </div>
           </div>
         </div>

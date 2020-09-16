@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Markets = () => {
+const Markets = (props) => {
 
   const [cryptos, setCryptos] = useState([])
 
@@ -17,7 +17,6 @@ const Markets = () => {
     try {
       document.getElementById('closing').innerHTML = crypto.RAW.BTC.USD.PRICE;
     } catch (e) {
-      /* console.log('NO EXISTEN POSICIONES ABIERTAS') */
     }
 
     console.log(crypto.RAW.BTC.USD.PRICE);

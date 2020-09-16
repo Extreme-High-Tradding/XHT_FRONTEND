@@ -1,32 +1,51 @@
 import React, { Component } from 'react';
 import TradingViewWidget, { Themes } from 'react-tradingview-widget';
-class Graphic extends Component {
+
+
+
+const Graphic = ({ symbol }) => {
+  return(
+    <React.Fragment>
+        <TradingViewWidget symbol={symbol} theme={Themes.LIGHT}
+        locale="fr"
+        autosize />
+    </React.Fragment>
+  )
+}
+
+export default Graphic;
+
+/* class Graphic extends Component {
   constructor(props) {
     super(props)
     this.state = {
       marketChart: 1,
-      market: 'COINBASE:BTCUSD'
+      market: 'COINBASE:BTCUSD',
+      currency: ''
     }
   }
 
   handleClick = () => {
     this.setState({
       marketChart: 0,
-      market: 'COINBASE:BTCUSD'
+      market: 'COINBASE:BTCUSD',
+      currency: 'BTC'
     });
   }
 
   handleClickOne = () => {
     this.setState({
       marketChart: 1,
-      market: 'COINBASE:ETHUSD'
+      market: 'COINBASE:ETHUSD',
+      currency: 'ETH'
     });
   }
 
   handleClickTwo = () => {
     this.setState({
       marketChart: 2,
-      market: 'COINBASE:BCHUSD'
+      market: 'COINBASE:BCHUSD',
+      currency: 'BCH'
     });
   }
 
@@ -44,4 +63,4 @@ class Graphic extends Component {
   }
 }
 
-export default Graphic;
+export default Graphic; */

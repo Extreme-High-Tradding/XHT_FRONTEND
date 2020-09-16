@@ -3,19 +3,18 @@ import Sell from './Sell';
 import Buy from './Buy';
 import '../../App.scss';
 
-class BuyandSell extends Component {
-  render(){
-    return(
-      <div className="order">
+
+const BuyandSell = ({ currency }) => {
+  return(
+    <div className="order">
         <div className="order__container">
-          <Sell />
+          <Sell value={currency}/>
         </div>
         <div className="order__container">
-          <Buy />
+          <Buy value={currency}/>
         </div>
       </div>
-    )
-  }
+  )
 }
 
 export default BuyandSell;
