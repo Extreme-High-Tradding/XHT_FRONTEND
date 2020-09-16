@@ -47,7 +47,7 @@ class Home extends Component {
             <button type="submit" onClick={this.handleClick}>Bitcoin</button>
             <button type="submit" onClick={this.handleClickOne}>Ethereum</button>
             <button type="submit" onClick={this.handleClickTwo}>Bitcoin Cash</button>
-            <Graphic symbol={this.state.currency} />
+            <Graphic symbol={this.state.market} />
           </div>
           <div className="container__tools">
               <div className="container__tools--buyandsell">
@@ -71,32 +71,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-/* const Home = () => {
-  return (
-    <React.Fragment>
-      <div className="container">
-          <div className="container__chart">
-            <Graphic />
-          </div>
-          <div className="container__tools">
-              <div className="container__tools--buyandsell">
-                <div className="container__balance">
-                  <h3>Balance:</h3>
-                  <a id="balance" className="header__navegation--value" alt="balance">100.000</a>
-                </div>
-                <BuyandSell />
-              </div>
-              <div className="container__tools--trades">
-                <RecentsTrades />
-              </div>
-              <div className="container__tools--markets">
-                <Markets />
-              </div>
-          </div>
-      </div>
-    </React.Fragment>
-  )
-}
-
-export default Home; */
