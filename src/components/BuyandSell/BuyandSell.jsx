@@ -4,14 +4,14 @@ import Buy from './Buy';
 import '../../App.scss';
 
 
-const BuyandSell = ({ currency }) => {
+const BuyandSell = ({ currency, value }) => {
   return(
     <div className="order">
         <div className="order__container">
-          <Sell value={currency}/>
+          <Sell currency={currency} value={value} />
         </div>
         <div className="order__container">
-          <Buy value={currency}/>
+          <Buy currency={currency} value={value} />
         </div>
       </div>
   )

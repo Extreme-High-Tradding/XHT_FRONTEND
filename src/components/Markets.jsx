@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const Markets = (props) => {
+const Markets = () => {
 
   const [cryptos, setCryptos] = useState([])
 
@@ -20,7 +20,6 @@ const Markets = (props) => {
     }
     setCryptos(crypto);
   }
-
     return(
       <div className="trades__main">
         <div className="trades__title">

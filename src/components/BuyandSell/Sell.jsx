@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import '../../App.scss';
 
 
-const Sell = ({value}) => {
+const Sell = ({ currency, value}) => {
     return(
-      <form className="form" id="sell_form">
+      <form className="form" id="sell_form" >
         <div className="form__inputs">
           <div className="form__info">
             <input
@@ -12,6 +12,7 @@ const Sell = ({value}) => {
               name="price"
               placeholder="Price"
               type="text"
+              value={value}
               className="form__info--price" alt="price"/>
               <div className="form__info--symbol">
                 <span>USD</span>
@@ -23,6 +24,7 @@ const Sell = ({value}) => {
               name="amount"
               placeholder="Amount"
               type="text"
+              value="1"
               className="form__info--amount" alt="amount"/>
               <input
               id="usersell_id"
@@ -49,7 +51,7 @@ const Sell = ({value}) => {
               type="hidden"
               className="input__hidden" />
               <div className="form__info--symbol">
-                <span>{value}</span>
+                <span>{currency}</span>
               </div>
           </div>
         </div>

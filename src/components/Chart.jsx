@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TradingViewWidget, { Themes } from 'react-tradingview-widget';
 
 
 
-const Graphic = ({ symbol }) => {
+const Chart = ({ symbol }) => {
   return(
     <React.Fragment>
         <TradingViewWidget symbol={symbol} theme={Themes.LIGHT}
@@ -13,4 +13,7 @@ const Graphic = ({ symbol }) => {
   )
 }
 
-export default Graphic;
+export default Chart;
+
+
+

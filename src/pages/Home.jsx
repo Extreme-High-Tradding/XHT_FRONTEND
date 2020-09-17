@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import BuyandSell from '../components/BuyandSell/BuyandSell';
 import RecentsTrades from '../components/RecentsTrades';
 import Markets from '../components/Markets'
-import Graphic from '../components/Graphic';
+import Chart from '../components/Chart';
 import './Home.scss';
 
 class Home extends Component {
@@ -10,8 +10,9 @@ class Home extends Component {
     super(props)
     this.state = {
       marketChart: 1,
-      market: 'COINBASE:BTCUSD',
-      currency: 'BTC'
+      market: "COINBASE:BTCUSD",
+      currency: 'BTC',
+      value: 10912
     }
   }
 
@@ -19,7 +20,8 @@ class Home extends Component {
     this.setState({
       marketChart: 0,
       market: 'COINBASE:BTCUSD',
-      currency: 'BTC'
+      currency: 'BTC',
+      value: 10912
     });
   }
 
@@ -27,7 +29,8 @@ class Home extends Component {
     this.setState({
       marketChart: 1,
       market: 'COINBASE:ETHUSD',
-      currency: 'ETH'
+      currency: 'ETH',
+      value: 376
     });
   }
 
@@ -35,7 +38,8 @@ class Home extends Component {
     this.setState({
       marketChart: 2,
       market: 'COINBASE:BCHUSD',
-      currency: 'BCH'
+      currency: 'BCH',
+      value: 233
     });
   }
 
@@ -47,7 +51,7 @@ class Home extends Component {
             <button type="submit" onClick={this.handleClick}>Bitcoin</button>
             <button type="submit" onClick={this.handleClickOne}>Ethereum</button>
             <button type="submit" onClick={this.handleClickTwo}>Bitcoin Cash</button>
-            <Graphic symbol={this.state.market} />
+            <Chart symbol={this.state.market} />
           </div>
           <div className="container__tools">
               <div className="container__tools--buyandsell">
@@ -55,13 +59,13 @@ class Home extends Component {
                   <h3>Balance:</h3>
                   <a id="balance" className="header__navegation--value" alt="balance">100.000</a>
                 </div>
-                <BuyandSell currency={this.state.currency}/>
+                <BuyandSell currency={this.state.currency} value={this.state.value} />
               </div>
               <div className="container__tools--trades">
                 <RecentsTrades />
               </div>
               <div className="container__tools--markets">
-                <Markets />
+                <Markets currency={this.state.currency} />
               </div>
           </div>
       </div>
